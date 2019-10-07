@@ -8,13 +8,24 @@ Fork and clone this repo. On your fork, answer and commit the follow questions. 
 a. Given the variable `userNameOne` below, print *"The username is Test User"*.  Use *Optional Binding* (`if let`) to print the name.
 
 ```swift
+
 var userNameOne: String? = "Test User"
+
+if let _ = userNameOne {
+    print("The username is Test User")
+}
+
 ```
 
 b. Given the variable `userNameTwo` below, print *"The username is undefined"*.  Use the *nil coalescing operator* (`??`).
 
 ```swift
 var userNameTwo: String? = nil
+
+var answer = userNameTwo ?? "The username is undefined"
+print(answer)
+
+
 ```
 
 ## Question 2
@@ -24,6 +35,12 @@ a. Given the variables `rectOneWidth` and `rectOneHeight` below, print "The area
 ```swift
 var rectOneWidth: Double? = 5
 var rectOneHeight: Double? = 10
+
+
+if let width = rectOneWidth, let height = rectOneHeight {
+    height * width
+    print("The area of rectOne is \(height * width)")
+}
 ```
 
 b. Given the variables `rectTwoWidth` and `rectTwoHeight` below, print "The are of rectTwo is not able to be calculated".  Use *Optional Binding* (`if let`) to print this message.
@@ -42,6 +59,13 @@ a. Given the variables `userOneName`, `userOneAge`, and `userOneHeight` below, w
 var userOneName: String? = "Anne"
 var userOneAge: Int? = 15
 var userOneHeight: Double? = 70
+
+if let name = userOneName,
+    let age = userOneAge,
+    let height = userOneHeight {
+    print("Hello \(name)! You are \(age) years old and \(height/12) feet tall")
+}
+
 ```
 
 b. Given the variables `userTwoName`, `userTwoAge` and `userTwoHeight` below, write code that prints "Hello user!  You are 15 years old and I don't know how tall you are".  Use optional binding
@@ -61,6 +85,13 @@ Give the variable `favoriteNumber`, write code that either prints "Your favorite
 
 ```swift
 var favoriteNumber = Bool.random() ? Int.random(in: 0...10) : nil
+
+if favoriteNumber == nil {
+    print("I don't know what your favorite number is")
+} else {
+ print("Your favorite number is \(String(describing: favoriteNumber))")
+}
+
 ```
 
 
