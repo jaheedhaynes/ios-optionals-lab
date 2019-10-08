@@ -104,6 +104,9 @@ Given the variables `numOne`, `numTwo` and `numThree`, write code that prints "T
 var numOne = Bool.random() ? Int.random(in: 0...10) : nil
 var numTwo = Bool.random() ? Int.random(in: 0...10) : nil
 var numThree = Bool.random() ? Int.random(in: 0...10) : nil
+
+var sum = (numOne ?? 0) + (numTwo ?? 0) + (numThree ?? 0)
+print(sum)
 ```
 
 ## Question 6
